@@ -2,6 +2,5 @@
 
 Basic Email Spammer on python!
 
-WORKS ONLY WITH GMAIL. If you want to add another email providers you can change the code and use it.
+You need your email to be @gmail. If you want to add another email provider you can change the code yourself.
 
-You can send to every email but the sender email needs to be from gmail
