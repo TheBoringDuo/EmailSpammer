@@ -9,8 +9,17 @@ def spammer():
         fromg = input("Your email:")
         passg = input("Your password:")
         ##
-        
-        tog = input("TO:")
+        print("TO: (when you are done with adding email type end.)")
+        a = 0
+        z = 1
+        top = []
+        while z==1:
+            to = input()
+            if(to=="end"):
+                z = 0
+                break
+            top.append(to)
+            a  = a + 1
         
         try:
             print ("Connecting to the server...")
@@ -19,13 +28,22 @@ def spammer():
             server.login(fromg, passg)
         
             mess = input("What message? ")
-            times = int(input("How much times: "))
+            times = int(input("How much times:(on every user) "))
             
             i = 1
+            b = 0
             while i<=times:
-                print("Message {} sended".format(i))
-                server.sendmail(fromg, tog, mess)
-                i = i + 1
+                while b<a:
+                    tog = top[b]
+                    print(tog)
+                    server.sendmail(fromg, tog, mess)
+                    print("Message {} sended".format(i))
+                    
+                    b = b + 1
+                if(b>=a):
+                    i = i + 1
+                    b = 0
+                
                 
             server.quit
             
