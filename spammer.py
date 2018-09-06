@@ -9,7 +9,7 @@ def spammer():
         fromg = input("Your email:")
         passg = input("Your password:")
         ##
-        print("TO: (when you are done with adding email type end.)")
+        print("TO: (when you are done with adding emails type end.)")
         a = 0
         z = 1
         top = []
